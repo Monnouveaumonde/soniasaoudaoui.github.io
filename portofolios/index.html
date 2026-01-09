@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio – Sonia</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/apropos.css" />
+        <link rel="stylesheet" href="css/competences.css" />
+        <link rel="stylesheet" href="css/transition.css" />
+    </head>
+    <body>
+        <canvas id="fluid-bg"></canvas>
+
+        <!-- === LAYOUT GLOBAL === -->
+        <div class="layout">
+            <!-- === SIDEBAR === -->
+            <aside class="sidebar nav-vertical">
+                <div class="sidebar-header">
+                    <div class="avatar-wrapper">
+                        <div class="aura"></div>
+                        <div class="avatar-initial"></div>
+                    </div>
+                    <h2 class="name">Sonia Saoudaoui</h2>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#home" class="nav-link active">Présentation</a>
+                    <a href="#skills" class="nav-link">Compétences</a>
+                    <a href="#projects" class="nav-link">Projets</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="sidebar-socials">
+                    <!-- GitLab -->
+                    <a
+                        href="https://gitlab.com/Soniagitlab"
+                        target="_blank"
+                        class="social-link"
+                        title="GitLab"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            width="22"
+                            height="22"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M22.65 14.39l-2.14-6.59-1.46-4.51a.57.57 0 0 0-1.08 0l-1.47 4.52H7.5L6 3.29a.57.57 0 0 0-1.08 0L3.44 7.8l-2.1 6.58a.56.56 0 0 0 .2.63l10.3 7.62 10.3-7.62a.56.56 0 0 0 .21-.62z"
+                            />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a
+                        href="https://www.linkedin.com/in/sonia-saoudaoui-3a9897334"
+                        target="_blank"
+                        class="social-link"
+                        title="LinkedIn"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            width="22"
+                            height="22"
+                        >
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                            />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:sonia.saoudaoui@hotmail.fr" class="social-link" title="Email">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            width="22"
+                            height="22"
+                        >
+                            <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                            <polyline points="3,7 12,13 21,7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <footer class="sidebar-footer">
+                    <p>© 2025 Saoudaoui</p>
+                </footer>
+            </aside>
+
+            <!-- === CONTENU PRINCIPAL === -->
+            <main class="main-content">
+                <!-- SECTION ACCUEIL -->
+                <section id="home" class="hero-section section visible">
+                    <div class="content">
+                        <img src="images/avatar.png" alt="Sonia" class="floating-image" />
+                        <h1 id="typingText" class="typing-text"></h1>
+                        <p class="subtitle">Conceptrice & Développeuse d’applications passionnée</p>
+                        <a href="HTML/projet.html" class="btn">Explorer mes projets</a>
+                        <a href="document/Sonia.Saoudaoui.cv (2).pdf" class="btn-outline" download
+                            >Télécharger mon CV</a
+                        >
+                    </div>
+                </section>
+
+                <!-- SECTION PRÉSENTATION -->
+                <!-- SECTION À PROPOS -->
+                <section id="about" class="section about-section">
+                    <div class="about-container">
+                        <div class="about-text">
+                            <h2>À propos de moi</h2>
+                            <p>
+                                Je suis <strong>Sonia Saoudaoui</strong>, conceptrice et
+                                développeuse d’applications web, passionnée par la création
+                                d’expériences numériques élégantes, performantes et humaines.
+                            </p>
+                            <p>
+                                j’aime concevoir des interfaces qui allient clarté, design et
+                                efficacité technique.
+                            </p>
+                            <p>
+                                Actuellement en préparation du titre professionnel
+                                <strong>Conceptrice Développeuse d’Applications</strong>, je
+                                souhaite collaborer sur des projets innovants où la technologie
+                                rencontre la créativité.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION COMPÉTENCES -->
+                <section id="skills" class="section">
+                    <h2>Compétences</h2>
+
+                    <!-- === FRONT-END === -->
+                    <div class="skills-block front-end">
+                        <h3>Front-End</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                    alt="HTML5"
+                                />
+                                <p>HTML5</p>
+                                <span>Avancé</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                    alt="CSS3"
+                                />
+                                <p>CSS3</p>
+                                <span>Avancé</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript"
+                                />
+                                <p>JavaScript</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                                    alt="Angular"
+                                />
+                                <p>Angular</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg"
+                                    alt="Ionic"
+                                />
+                                <p>Ionic</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                    alt="Bootstrap"
+                                />
+                                <p>Bootstrap</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === BACK-END === -->
+                    <div class="skills-block back-end">
+                        <h3>Back-End</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                    alt="PHP"
+                                />
+                                <p>PHP</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg"
+                                    alt="Symfony"
+                                />
+                                <p>Symfony</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python"
+                                />
+                                <p>Python</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                    alt="Django"
+                                />
+                                <p>Django</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+                                    alt="NestJS"
+                                />
+                                <p>NestJS</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                    alt="Java"
+                                />
+                                <p>Java</p>
+                                <span>Bases</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                                    alt="Spring Boot"
+                                />
+                                <p>Spring Boot</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                    alt="MySQL"
+                                />
+                                <p>MySQL</p>
+                                <span>Intermédiaire</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                    alt="PostgreSQL"
+                                />
+                                <p>PostgreSQL</p>
+                                <span>Débutant</span>
+                            </div>
+
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg"
+                                    alt="API REST"
+                                />
+                                <p>API REST</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === OUTILS & ENVIRONNEMENTS === -->
+                    <div class="skills-block tools">
+                        <h3>Outils & Environnements</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git"
+                                />
+                                <p>Git</p>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                                    alt="GitLab"
+                                />
+                                <p>GitLab</p>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                    alt="VS Code"
+                                />
+                                <p>VS Code</p>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+                                    alt="Jira"
+                                />
+                                <p>Jira</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                    alt="Figma"
+                                />
+                                <p>Figma</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                                    alt="Postman"
+                                />
+                                <p>Postman</p>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-card">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                                    alt="Linux"
+                                />
+                                <p>Linux</p>
+                                <span>Débutant</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects">
+                    <div class="btn-center">
+                        <a href="html/projet.html" class="to-projects">Découvrir mes projets</a>
+                        <div id="transitionOverlay"></div>
+                    </div>
+                </section>
+
+                <!-- SECTION CONTACT -->
+                <section id="contact" class="section contact-section">
+                    <h2>Contact</h2>
+
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                        action="https://formspree.io/f/mjknqvvw"
+                        method="POST"
+                    >
+                        <input type="text" name="name" placeholder="Nom" required />
+                        <input type="email" name="email" placeholder="Email" required />
+                        <textarea
+                            name="message"
+                            rows="4"
+                            placeholder="Votre message..."
+                            required
+                        ></textarea>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+
+                    <!-- Effet visuel -->
+                    <div id="sendAnimation"></div>
+                </section>
+            </main>
+        </div>
+        <script src="/JS/script.js"></script>
+
+        <audio id="sendSound" src="sounds/whoosh.mp3" preload="auto"></audio>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const link = document.querySelector('.to-projects');
+                const overlay = document.getElementById('transitionOverlay');
+
+                if (!link || !overlay) return;
+
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+
+                    // 🌊 Lance la vague d’eau
+                    overlay.classList.remove('run');
+                    void overlay.offsetWidth;
+                    overlay.classList.add('run');
+
+                    // 🔹 Redirection juste avant la fin de l’effet
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 750);
+                });
+            });
+
+            const links = [...document.querySelectorAll('.sidebar.nav-vertical .nav-link')];
+            const ids = links.map((a) => a.getAttribute('href').replace('#', ''));
+            const sections = ids.map((id) => document.getElementById(id)).filter(Boolean);
+
+            const io = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            links.forEach((l) =>
+                                l.classList.toggle(
+                                    'active',
+                                    l.getAttribute('href') === '#' + entry.target.id
+                                )
+                            );
+                        }
+                    });
+                },
+                { threshold: 0.6 }
+            );
+
+            sections.forEach((s) => io.observe(s));
+        </script>
+    </body>
+</html>

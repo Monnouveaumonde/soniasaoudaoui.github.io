@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Projets – Sonia</title>
+        <link rel="stylesheet" href="/CSS/projets.css" />
+        <link rel="stylesheet" href="/CSS/object.css" />
+
+        <!-- Librairies -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    </head>
+
+    <body>
+        <header class="hero-ultra">
+            <div class="hero-bg">
+                <div class="pattern"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="mask">
+                        <span class="text">MES PROJETS</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">
+                    Des expériences web modernes alliant design, technologie et interactivité.
+                </p>
+            </div>
+        </header>
+
+        <a href="/index.html" class="return-link">← Retour au portfolio</a>
+        <div id="transitionOverlay"></div>
+
+        <!-- ======= SECTIONS PROJETS ======= -->
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+
+            <div class="project-info">
+                <h2 class="project-title">Livret de suivi</h2>
+                <p>
+                    Application <strong>Symfony 7</strong> dédiée au suivi pédagogique des
+                    apprenants CDA, avec une redirection automatique selon le rôle.
+                </p>
+
+                <p>
+                    <strong>Formateur :</strong> accès complet aux livrets des apprenants, ajout de
+                    cours, gestion des évaluations et du calendrier.
+                    <br />
+                    <strong>Apprenant :</strong> accès à son livret personnel, consultation des
+                    notes, progression et événements de formation.
+                </p>
+
+                <p>
+                    Un <strong>calendrier dynamique</strong> affiche cours, évaluations et périodes
+                    clés pour une vision centralisée de la formation.
+                </p>
+
+                <ul class="tech-list">
+                    <li>Symfony</li>
+                    <li>API Platform</li>
+                    <li>FullCalendar</li>
+                    <li>PHPUnit</li>
+                </ul>
+
+                <a
+                    href="https://gitlab.com/Soniagitlab/livret_suivi"
+                    class="btn-code"
+                    target="_blank"
+                >
+                    Voir le code →
+                </a>
+            </div>
+
+            <div class="project-image small-carousel">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/calendar.png" alt=" calendrier" />
+                        <img src="/images/livret2.png" alt="admin" />
+                        <img src="/images/connectlivret.png" alt="admin" />
+                    </div>
+                    <div class="carousel-nav">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+            <div class="project-info">
+                <h2 class="project-title">Food truck</h2>
+                <p class="project-desc">
+                    Site vitrine dédié à un food truck, conçu pour mettre en avant la carte, les
+                    menus et les informations essentielles, avec un design responsive et une
+                    navigation fluide sur mobile.
+                </p>
+                <ul class="tech-list">
+                    <li>php</li>
+                    <li>html</li>
+                    <li>css</li>
+                </ul>
+                <a
+                    href="https://gitlab.com/soniagitlab/food-truck"
+                    class="btn-code"
+                    target="_blank"
+                >
+                    Voir le code →
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="/images/foodtruck.jpg.png" alt="foodtruck" />
+            </div>
+        </section>
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+            <div class="project-info">
+                <h2 class="project-title">Blog Django</h2>
+                <p class="project-desc">
+                    Blog dynamique développé avec Django et API Platform, offrant une interface
+                    fluide pour publier, commenter et explorer du contenu. <br />
+                    Des tests unitaires ont été mis en place avec PHPUnit sur la partie API afin de
+                    valider les fonctionnalités clés et garantir la fiabilité du code.
+                </p>
+                <ul class="tech-list">
+                    <li>Django</li>
+                    <li>API Platform</li>
+                    <li>Python</li>
+                </ul>
+                <a href="https://gitlab.com/Soniagitlab/tp_django" class="btn-code" target="_blank">
+                    Voir le code →
+                </a>
+            </div>
+            <div class="project-image small-carousel">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/blog.jpg" alt="blog 1" />
+                        <img src="/images/django api.png" alt="blog 2" />
+                        <img src="/images/testapi.png" alt="blog 3" />
+                    </div>
+                    <div class="carousel-nav">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+            <div class="project-info">
+                <h2 class="project-title">Application de blog</h2>
+                <p class="project-desc">
+                    Ce projet est une application de Blog moderne, entièrement développée en
+                    full-stack. Elle permet la création, la gestion et la consultation d’articles à
+                    travers une API sécurisée, une interface web responsive et une application
+                    mobile Android. <br />
+                    <strong>⚙️ Backend –</strong>
+                    API Spring Boot Développé avec Spring Boot 3.5 sous Eclipse. <br />
+                    <strong>Frontend Web – Angular</strong>
+                    Développé en Angular 21, pour une interface moderne et responsive. <br />
+                    <strong>Fonctionnalités :</strong>
+                    Affichage des articles Page de détail Formulaire de création d’article Connexion
+                    / inscription Gestion du token JWT Services Angular pour communiquer avec l’API
+                    Alertes, erreurs, validation
+                    <br />
+                    <strong>📱 Version Mobile – Ionic + Android Studio</strong> L’application web a
+                    été portée sur mobile grâce à Ionic et Capacitor, puis compilée sur Android
+                    Studio.<br />
+                    <strong>Fonctionnalités Mobile :</strong>
+                    Interface adaptée aux écrans mobiles Navigation fluide (Ionic Router)
+                    Consultation & création d’articles Authentification utilisateur Build Android
+                    via Android Studio Tests sur émulateur (Pixel 9A) Tests professionnels avec
+                    Postman Architecture
+                </p>
+                <ul class="tech-list">
+                    <li>Spring Boot</li>
+                    <li>Ionic</li>
+                    <li>Android Studio</li>
+                </ul>
+                <a href="https://gitlab.com/soniagitlab/tpjeux" class="btn-code" target="_blank">
+                    Voir le code →
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="/images/ionic.png" alt="jeu" />
+            </div>
+        </section>
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+            <div class="project-info">
+                <h2 class="project-title">Portofolio</h2>
+                <p class="project-desc">
+                    Un portfolio immersif conçu comme une interface futuriste — un espace où design,
+                    technologie et créativité se rencontrent pour révéler mon univers de
+                    développeuse.
+                </p>
+                <ul class="tech-list">
+                    <li>Html</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="project-image small-carousel">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="/images/portofolio1.png" alt="portofolio 1" />
+                        <img src="/images/portofolio2.png" alt="portofolio 2" />
+                        <img src="/images/portofolio3.png" alt="portofolio 2" />
+                    </div>
+                    <div class="carousel-nav">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-card fade">
+            <div class="project-bg"></div>
+            <div class="project-info">
+                <h2 class="project-title">Maison connecté</h2>
+                <p class="project-desc">
+                    Développée avec Angular, cette application simule la gestion d’une maison
+                    connectée. Elle permet d’allumer, éteindre et suivre les appareils à distance
+                    via une interface fluide et réactive.
+                </p>
+                <ul class="tech-list">
+                    <li>Angular</li>
+                </ul>
+                <a
+                    href="https://gitlab.com/soniagitlab/maisonconnecte"
+                    class="btn-code"
+                    target="_blank"
+                >
+                    Voir le code →
+                </a>
+            </div>
+            <div class="project-image">
+                <img src="/images/maison-connecte.png" alt="maisonconnecte" />
+            </div>
+        </section>
+        <section id="goals" class="section goals-banner">
+            <div class="goals-animated-bg">
+                <div class="glow"></div>
+                <div class="neon-grid"></div>
+            </div>
+
+            <div class="goals-content">
+                <h2 class="goals-title">Objectifs & Parcours</h2>
+                <p class="goals-subtitle">
+                    Une trajectoire construite avec rigueur, passion et ambition — chaque étape me
+                    rapproche de mes objectifs d’excellence.
+                </p>
+
+                <div class="goals-list">
+                    <div class="goal-card reveal">
+                        <h3>🎓 Formations</h3>
+                        <ul>
+                            <li>Concepteur Développeur d’Applications CDA (en cours)</li>
+                            <li>Certification Harvard CS50 (en préparation)</li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-card reveal">
+                        <h3>🌍 Développement personnel</h3>
+                        <ul>
+                            <li>Perfectionnement en anglais technique</li>
+                            <li>Formation continue en cybersécurité</li>
+                            <li>
+                                Veille technologique sur les frameworks et outils du développement
+                                web
+                            </li>
+                            <li>
+                                Renforcement des bonnes pratiques de qualité, tests et sécurité
+                                applicative
+                            </li>
+                            <li>Apprentissage progressif des environnements DevOps (CI/CD)</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-card reveal">
+                        <h3>🚀 Objectifs futurs</h3>
+                        <ul>
+                            <li>
+                                Approfondir mes compétences techniques sur les technologies web
+                                modernes
+                            </li>
+                            <li>
+                                Monter en expertise sur les tests (unitaires, intégration) et les
+                                bonnes pratiques de qualité
+                            </li>
+                            <li>
+                                Découvrir et renforcer les processus d’intégration et de déploiement
+                                continus (CI/CD)
+                            </li>
+                            <li>
+                                Évoluer dans un environnement professionnel favorisant
+                                l’apprentissage et la collaboration
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Sonia — Tous droits réservés.</p>
+        </footer>
+
+        <script src="/JS/projet.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const link = document.querySelector('.return-link');
+                const overlay = document.getElementById('transitionOverlay');
+
+                if (!link || !overlay) return;
+
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+
+                    // 🌊 Lance la vague aquatique
+                    overlay.classList.remove('run');
+                    void overlay.offsetWidth;
+                    overlay.classList.add('run');
+
+                    // ⏱️ Redirige juste avant la fin de l'effet (quand elle est encore visible)
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 1000);
+                });
+            });
+
+            const carousels = document.querySelectorAll('.carousel');
+
+            carousels.forEach((carousel) => {
+                const track = carousel.querySelector('.carousel-track');
+                const dots = carousel.querySelectorAll('.dot');
+                let index = 0;
+
+                function moveCarousel(i) {
+                    index = i;
+                    track.style.transform = `translateX(-${i * 100}%)`;
+                    dots.forEach((dot, d) => dot.classList.toggle('active', d === i));
+                }
+
+                setInterval(() => {
+                    index = (index + 1) % dots.length;
+                    moveCarousel(index);
+                }, 4000);
+
+                dots.forEach((dot, i) => dot.addEventListener('click', () => moveCarousel(i)));
+            });
+        </script>
+        <script>
+            const revealElements = document.querySelectorAll('.goal-card');
+
+            const revealOnScroll = () => {
+                const triggerBottom = window.innerHeight * 0.8;
+                revealElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < triggerBottom) {
+                        el.classList.add('reveal');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', revealOnScroll);
+            document.addEventListener('DOMContentLoaded', () => {
+                const goalsSection = document.getElementById('goals');
+                if (!goalsSection) return; // sécurité si l’ID est absent
+
+                const title = goalsSection.querySelector('.goals-title');
+                const subtitle = goalsSection.querySelector('.goals-subtitle');
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                title.classList.add('visible');
+                                setTimeout(() => subtitle.classList.add('visible'), 300);
+                            }
+                        });
+                    },
+                    { threshold: 0.3 }
+                );
+
+                observer.observe(goalsSection);
+            });
+        </script>
+    </body>
+</html>

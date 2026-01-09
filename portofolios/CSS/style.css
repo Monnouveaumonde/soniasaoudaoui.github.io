@@ -1,0 +1,471 @@
+/* =========================================================
+   🌈 1. PALETTE & VARIABLES GLOBALES
+========================================================= */
+:root {
+    --bg: #090c14;
+    --text: #e4f1ff;
+    --neon: #00c8ff;
+    --accent: #007bff;
+    --gradient: linear-gradient(135deg, #00bfff, #0078ff, #001eff);
+    --sidebar-width: 160px;
+}
+
+/* =========================================================
+   🔧 2. RESET & STRUCTURE DE BASE
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: transparent;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* =========================================================
+   🌌 3. FOND FLUIDE FUTURISTE
+========================================================= */
+#fluid-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 30% 30%, #0b0e15 0%, #05060a 100%);
+    pointer-events: none;
+}
+
+/* =========================================================
+   🧱 4. STRUCTURE GÉNÉRALE DU SITE
+========================================================= */
+.main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    z-index: 2;
+    position: relative;
+}
+
+/* =========================================================
+   📄 5. SECTIONS PRINCIPALES
+========================================================= */
+.section {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   💫 6. EFFETS ET ANIMATIONS GÉNÉRAUX
+========================================================= */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+.floating-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--neon);
+    box-shadow: 0 0 25px var(--neon);
+    animation: float 4s ease-in-out infinite;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+/* =========================================================
+   🪩 7. TYPOGRAPHIE & BOUTONS
+========================================================= */
+.typing-text {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--neon);
+    text-shadow: 0 0 15px var(--neon);
+    margin-bottom: 1rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: #d6e6f9;
+    margin-bottom: 2rem;
+}
+.btn {
+    background: var(--gradient);
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px var(--neon);
+}
+
+/* =========================================================
+   🧊 8. SIDEBAR (NAVIGATION VERTICALE)
+========================================================= */
+.sidebar.nav-vertical {
+    position: fixed;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    width: 145px;
+    height: 82vh;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    overflow: hidden;
+    z-index: 20;
+
+    /* Effet verre (glassmorphism) */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25), inset 0 0 30px rgba(255, 255, 255, 0.05);
+}
+/* === HALO PRINCIPAL — respiration normale === */
+.sidebar.nav-vertical::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 24px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 200, 255, 0.4),
+        rgba(0, 200, 255, 0.07) 70%,
+        transparent 100%
+    );
+    filter: blur(20px);
+    animation: nebulaGlow 5s ease-in-out infinite;
+    opacity: 0.6;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transition: all 0.4s ease-in-out;
+}
+
+@keyframes nebulaGlow {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+        filter: blur(16px);
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+        filter: blur(24px);
+    }
+}
+
+/* === SURVOL : surcharge d'énergie lumineuse === */
+.sidebar.nav-vertical:hover::after {
+    opacity: 1;
+    filter: blur(35px) brightness(1.8) saturate(1.3);
+    transform: scale(1.15);
+    box-shadow: 0 0 35px rgba(0, 200, 255, 0.8), 0 0 65px rgba(0, 200, 255, 0.5),
+        inset 0 0 45px rgba(0, 200, 255, 0.3);
+    transition: all 0.45s ease-in-out;
+}
+
+/* =========================================================
+   🧭 9. LIENS DE NAVIGATION
+========================================================= */
+.sidebar.nav-vertical .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem;
+    margin-top: 2rem;
+    transform: translateY(40px);
+    text-align: center;
+}
+.sidebar.nav-vertical .nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.35s ease;
+    padding: 0.4rem 0;
+}
+.sidebar.nav-vertical .nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--neon);
+    transform: translateX(3px);
+}
+
+/* Effets visuels des liens */
+.sidebar.nav-vertical .nav-link::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 0;
+    background: linear-gradient(180deg, transparent, rgba(0, 200, 255, 0.8), transparent);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+.sidebar.nav-vertical .nav-link:hover::before {
+    height: 18px;
+}
+.sidebar.nav-vertical .nav-link.active::before {
+    height: 22px;
+    background: linear-gradient(180deg, transparent, var(--neon), transparent);
+}
+.sidebar.nav-vertical .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon), transparent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+    opacity: 0.9;
+}
+/* === ✨ EFFET NÉON SUR LE LIEN ACTIF === */
+.sidebar.nav-vertical .nav-link.active {
+    color: #fff;
+    text-shadow: 0 0 8px var(--neon), 0 0 20px var(--neon);
+    transform: scale(1.05);
+}
+
+.sidebar.nav-vertical .nav-link.active::before {
+    height: 22px;
+    background: linear-gradient(180deg, transparent, var(--neon), transparent);
+}
+
+.sidebar.nav-vertical .nav-link.active::after {
+    width: 60%;
+    box-shadow: 0 0 10px var(--neon);
+}
+
+/* =========================================================
+   👩‍💻 10. HEADER, NOM ET FOOTER SIDEBAR
+========================================================= */
+.sidebar.nav-vertical .sidebar-header {
+    text-align: center;
+}
+.sidebar.nav-vertical .name {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px var(--neon);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.sidebar.nav-vertical .name::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon), transparent);
+    opacity: 0.7;
+    border-radius: 2px;
+}
+.sidebar.nav-vertical .sidebar-footer {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    width: 100%;
+}
+
+/* =========================================================
+   🌐 11. RÉSEAUX SOCIAUX
+========================================================= */
+.sidebar.nav-vertical .sidebar-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: auto;
+}
+.sidebar.nav-vertical .social-link svg {
+    stroke: rgba(255, 255, 255, 0.8);
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+.sidebar.nav-vertical .social-link:hover svg {
+    stroke: #fff;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+}
+
+/* =========================================================
+   ✉️ 12. SECTION CONTACT
+========================================================= */
+#contact.section {
+    background: transparent;
+    box-shadow: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    gap: 1rem;
+    width: 80%;
+    max-width: 400px;
+}
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--neon);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 8px;
+}
+.contact-form button {
+    background: var(--gradient);
+    color: #000;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px var(--neon);
+}
+
+/* Animation d’envoi du mail */
+#sendAnimation {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 50;
+}
+.mail-icon {
+    font-size: 3.5rem;
+    color: var(--neon);
+    text-shadow: 0 0 20px var(--neon);
+    position: absolute;
+    animation: sendMail 2.8s ease-in-out forwards;
+}
+.mail-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon), transparent);
+    transform: translateY(-50%) rotate(15deg);
+    opacity: 0.7;
+    animation: tailFade 2s ease-in-out forwards;
+}
+@keyframes sendMail {
+    0% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(380px, -420px) rotate(25deg) scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes tailFade {
+    from {
+        opacity: 0.9;
+        width: 0;
+    }
+    to {
+        opacity: 0;
+        width: 150px;
+    }
+}
+
+/* =========================================================
+   📱 13. RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 768px) {
+    .sidebar.nav-vertical {
+        top: auto;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92vw;
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.6rem 1rem;
+        border-radius: 16px;
+    }
+    .sidebar.nav-vertical::after {
+        left: 0;
+        width: 100%;
+        height: 2px;
+        animation: moveLightHorizontal 4s linear infinite;
+        background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.6), transparent);
+    }
+    @keyframes moveLightHorizontal {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+    .sidebar.nav-vertical .sidebar-header,
+    .sidebar.nav-vertical .sidebar-footer {
+        display: none;
+    }
+    .sidebar.nav-vertical .sidebar-nav {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
